@@ -41,7 +41,7 @@ body{
     width: 90%;
     max-width: 1200px;
     margin: auto;
-    background-image: url(..IMG/Logo_2-removebg-preview.png);
+    background-image: url(../IMG/Logo_2-removebg-preview.png);
 }
 .container .btn-menu, .logo{
     float: left;
