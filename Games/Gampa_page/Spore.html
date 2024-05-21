@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/Spore.css">
+    <link rel="Shortcut icon" href="/IMG/ICON/PIXEL_ICON.jpg">
+    <title>SPORE</title>
+</head>
+<body>
+    <div class="loader">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(window).load(function() {
+                $(".loader").fadeOut("slow");
+            });
+        </script>
+    </div>
+        <header class="header">
+            <div class="container">
+            <div class="btn-menu">
+                <label for="btn-menu">☰</label>
+            </div>
+                <div class="logo">
+                    <h1>Welcome to Pixelworld</h1>
+                </div>
+                <img style="width:150px; margin-left: 240px; margin-top: 5px;" src="/IMG/LOGO/Logo_2-removebg-preview.png" alt="Pixelworld">
+                <nav class="menu">
+                    <a href="/HTML/Pixelworld.html">Inicio</a>
+				    <a href="#">PixelArts</a>
+				    <a href="/HTML/Game_page.html">Pixel Games</a>
+				    <a href="mailto:brandonstanlyv@gmail.com">Contactanos!</a><div><br><br><br></div>
+                    <div class="Buscador">
+                        <div class="autocomplete">
+                            <input id="search-input" class="autocomplete-input" type="text" placeholder="Buscar página">
+                            <div id="autocomplete-list" class="autocomplete-items"></div>
+                        </div>
+                        <script>
+                            // Lista de páginas
+                            var pages = [
+                            { title: 'Blasphemous', url: '/Games/Gampa_page/Blasphemous.html' },
+                                { title: 'Celeste', url: '/Games/Gampa_page/Celeste.html' },
+                                { title: 'Chrono Trigger', url: '/Games/Gampa_page/ChronoTrigger.html' },
+                                { title: 'Coffe Talk', url: '/Games/Gampa_page/CoffeTalk.html' },
+                                { title: 'Dead Cells', url: '/Games/Gampa_page/DeadCells.html' },
+                                { title: 'Hollow Knight', url: '/Games/Gampa_page/HollowKnight.html' },
+                                { title: 'Hyper Light Drifter', url: '/Games/Gampa_page/HyperLight.html' },
+                                { title: 'Katana Zero', url: '/Games/Gampa_page/KatanaZero.html' },
+                                { title: 'Left 4 Dead', url: '/Games/Gampa_page/Left4Dead.html' },
+                                { title: 'Loop Hero', url: '/Games/Gampa_page/LoopHero.html' },
+                                { title: 'Moonlighter Adventure', url: '/Games/Gampa_page/Moonlighter.html' },
+                                { title: 'Owlboy', url: '/Games/Gampa_page/Owlboy.html' },
+                                { title: 'Paper Please', url: '/Games/Gampa_page/PaperPlease.html' },
+                                { title: 'RimWorld', url: '/Games/Gampa_page/RimWorld.html' },
+                                { title: 'Spore', url: '/Games/Gampa_page/Spore.html' },
+                                { title: 'Stardew Valley', url: '/Games/Gampa_page/StardewValley.html' },
+                                { title: 'Streets of Rogue', url: '/Games/Gampa_page/StreetsofRogue.html' },
+                                { title: 'Terraria', url: '/Games/Gampa_page/Terraria.html' },
+                                { title: 'The Messenger', url: '/Games/Gampa_page/TheMessenger.html' },
+                                { title: 'There Is No Game', url: '/Games/Gampa_page/ThereIsNoGame.html' },
+                                { title: 'Ultrakill', url: '/Games/Gampa_page/Ultrakill.html' },
+                                { title: 'Undertale', url: '/Games/Gampa_page/Undertale.html' },
+                            ];
+                            // Obtener referencias a los elementos del DOM
+                            var searchInput = document.getElementById('search-input');
+                            var autocompleteList = document.getElementById('autocomplete-list');
+                            // Evento de entrada de teclado en el campo de búsqueda
+                            searchInput.addEventListener('input', function() {
+                                var searchValue = this.value.toLowerCase();
+                                var matches = pages.filter(function(page) {
+                                    return page.title.toLowerCase().indexOf(searchValue) !== -1;
+                                });
+                                autocompleteList.innerHTML = '';
+                                if (matches.length > 0) {
+                                    matches.forEach(function(page) {
+                                        var item = document.createElement('div');
+                                        item.classList.add('autocomplete-item');
+                                        item.innerText = page.title;
+                                        item.addEventListener('click', function() {
+                                            window.location.href = page.url;
+                                        });
+                                        autocompleteList.appendChild(item);
+                                    });
+                                    autocompleteList.style.display = 'block';
+                                } else {
+                                    autocompleteList.style.display = 'none';
+                                }
+                            });
+                            // Evento de clic fuera del campo de búsqueda
+                            window.addEventListener('click', function(e) {
+                                if (!searchInput.contains(e.target)) {
+                                    autocompleteList.style.display = 'none';
+                                }
+                            });
+                        </script>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="capa"></div>
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <label for="btn-menu">X</label>
+            <nav>
+                <img style="width:300px; margin-left: -20px; margin-top: -50px" src="/IMG/LOGO/IMG_0672.png" alt="">
+                <a href="/HTML/Pixelworld.html">Inicio</a>
+                <a href="#">Cuenta</a>
+                <a href="/HTML/Game_page.html">Pixel Games</a>
+                <a href="#">PixelArts</a>
+                <a href="/HTML/Login.html">Cerrar sesion</a>
+                <a href="mailto:brandonstanlyv@gmail.com">Enviar comentarios</a>
+                <a href="https://www.facebook.com/bradonstanlyventura/about" target="_blank"><img width="30px" src="/IMG/LOGO/Facebook_logo.png" alt=""> Facebook</a>
+                <a href="https://twitter.com/TeamFocking" target="_blank"><img width="30px" src="/IMG/LOGO/Twitter_logo.png" alt=""> Twitter</a>
+            </nav>
+        </div>
+    </div>
+    <div class="contenido">
+        <div class="regre">
+            <a href="/HTML/Game_page_3.html"><img src="https://img.icons8.com/ios-filled/50/000000/long-arrow-left.png"/></a>
+        </div>
+        <p style="border-left: #343c7c solid 5px;">SPORE</p>
+        <div class="game">
+            <div id="Display">
+                <div class="carrocel" id="carrocel-1">
+                    <div class="Play" id="Play-1">
+                        <img width="570px"  height="320px" src="/IMG/Game_Display/SPORE/SPORE_IMG1.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-1">
+                        <a href="#carrocel-7"><i>🢀</i></a>
+                        <a href="#carrocel-2"><i>🢂</i></a>
+                    </div>
+                </div><br>
+                <div class="carrocel" id="carrocel-2">
+                    <div class="Play" id="Play-2">
+                        <img width="570px"  height="320px" src="/IMG/Game_Display/SPORE/SPORE_IM2.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-2">
+                        <a href="#carrocel-1"><i>🢀</i></a>
+                        <a href="#carrocel-3"><i>🢂</i></a>
+                    </div>
+                </div><br>
+                <div class="carrocel" id="carrocel-3">
+                    <div class="Play" id="Play-3">
+                        <img width="570px"  height="320px" src="/IMG/Game_Display/SPORE/SPORE_IM3.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-3">
+                        <a href="#carrocel-2"><i>🢀</i></a>
+                        <a href="#carrocel-4"><i>🢂</i></a>
+                    </div>
+                </div><br>
+                <div class="carrocel" id="carrocel-4">
+                    <div class="Play" id="Play-4">
+                        <img width="570px"  height="320px" src="/IMG/Game_Display/SPORE/SPORE_IM4.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-4">
+                        <a href="#carrocel-3"><i>🢀</i></a>
+                        <a href="#carrocel-5"><i>🢂</i></a>
+                    </div>
+                </div><br>
+                <div class="carrocel" id="carrocel-5">
+                    <div class="Play" id="Play-5">
+                        <img width="570px"  height="320px" src="/IMG/Game_Display/SPORE/SPORE_IM5.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-5">
+                        <a href="#carrocel-4"><i>🢀</i></a>
+                        <a href="#carrocel-6"><i>🢂</i></a>
+                    </div>
+                </div><br>
+                <div class="carrocel" id="carrocel-6">
+                    <div class="Play" id="Play-6">
+                        <img width="570px"  height="320px" src="/IMG/Game_Display/SPORE/SPORE_IM6.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-6">
+                        <a href="#carrocel-5"><i>🢀</i></a>
+                        <a href="#carrocel-7"><i>🢂</i></a>
+                    </div>
+                </div><br>
+                <div class="carrocel" id="carrocel-7">
+                    <div class="Play" id="Play-7">
+                        <img width="570px"  height="320px" src="/IMG/Game_Display/SPORE/SPORE_IMG7.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-7">
+                        <a href="#carrocel-6"><i>🢀</i></a>
+                        <a href="#carrocel-1"><i>🢂</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="cont-info">
+            <b><p style="font-size: 20px; margin-left: 50px;">ACERCA DE ESTE JUEGO</p></b><br>
+            <img src="/IMG/Game_Display/SPORE/SporeKeyArtLogo_Fluted_cmyk.png" alt="">
+            <p style="font-size: 18px; margin-left: 50px;"><p style="color: #343c7c; font-size: 20px; margin-left: 50px">De Single Cell a Dios Galáctico, evoluciona 
+                en un universo de tus propias creaciones.</p><p style="font-size: 18px; margin-left: 50px">Juega a través de las cinco etapas evolutivas de Spore: Célula, Criatura, 
+                    Tribu, Civilización y Espacio. Cada etapa tiene su propio estilo, desafíos y objetivos únicos.</p></p><br>
+            <p style="font-size: 18px; margin-left: 50px;">Puedes jugar como quieras: comienza en Cell y nutre una especie, desde un humilde organismo de marea hasta un viajero intergaláctico, 
+                o salta directamente y construye tribus o civilizaciones en nuevos planetas. Lo que hagas con tu universo depende de ti.</p><br>
+            <p style="font-size: 18px; margin-left: 50px;">Spore le brinda una variedad de herramientas de creación poderosas pero fáciles de usar para que pueda crear 
+                todos los aspectos de su universo: criaturas, vehículos, edificios e incluso naves estelares.</p><br>
+            <p style="font-size: 20px; margin-left: 50px; color: #343c7c;"><b>Caracteristicas</b></p>
+                <p>
+                    <ul style="font-size: 18px; margin-left: 50px;">
+                        <li>CREA tu universo de microscópico a macrocósmico: desde amebas de charca de marea hasta civilizaciones prósperas y naves estelares intergalácticas, todo está en tus manos.</li>
+                        <li>EVOLUCIONA a tu criatura a través de cinco etapas: es la supervivencia más divertida a medida que tus elecciones repercuten a través de generaciones y, en última instancia, deciden el destino de tu civilización.</li>
+                    </ul>
+                </p><br>
+                <div class="requisitos">
+                    <b><p>Requisitos</p></b>
+                    <p>Minimos</p>
+                    <ul>
+                        <li>SO compatible: Microsoft Windows® XP con Service Pack 1 y Vista</li><br>
+                        <li>Procesador: Intel Pentium® 4 de 2,0 GHz o equivalente</li><br>
+                        <li>Memoria: 512 MB de RAM (768 MB de RAM para Vista)</li><br>
+                        <li>Gráficos: tarjeta de video de 128 MB, compatible con Pixel Shader 2.0</li><br>
+                        <li>DirectX®: la última versión de DirectX 9.0c o superior</li><br>
+                        <li>Disco duro: al menos 4 GB de espacio en el disco duro, con al menos 1 GB de espacio adicional para creaciones , o Core 2 Duo de 1,8 GHz, o equivalente 768 MB de RAM</li><br>
+                    </ul>
+                </div>
+            <br>
+        </div>
+    </div>
+    <div class="info-game">
+        <img width="350px" src="/IMG/Game_Display/SPORE/SPORE-header.jpg" alt="">
+        <p>Sé el arquitecto de tu propio universo con Spore, una emocionante aventura 
+            para un jugador. De célula única a dios galáctico, evoluciona a tu 
+            criatura en un universo de tus propias creaciones.</p><br>
+            <a href="https://www.mediafire.com/file/pgb98mvh3un1fum/Spore_Complete_Edition.rar/file" target="_blank"><input type="button" value="DESCARGAR"></a>
+    </div>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="Copy">&reg;Pixelworld &copy;2022 Stanvs_Dev</div> 
+</body>
+</html>

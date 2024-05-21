@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/Left4Dead.css">
+    <link rel="Shortcut icon" href="/IMG/ICON/PIXEL_ICON.jpg">
+    <title>Left 4 Dead 2</title>
+</head>
+<body>
+    <div class="loader">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(window).load(function() {
+                $(".loader").fadeOut("slow");
+            });
+        </script>
+    </div>
+        <header class="header">
+            <div class="container">
+            <div class="btn-menu">
+                <label for="btn-menu">☰</label>
+            </div>
+                <div class="logo">
+                    <h1>Welcome to Pixelworld</h1>
+                </div>
+                <img style="width:150px; margin-left: 240px; margin-top: 5px;" src="/IMG/LOGO/Logo_2-removebg-preview.png" alt="Pixelworld">
+                <nav class="menu">
+                    <a href="/HTML/Pixelworld.html">Inicio</a>
+				    <a href="#">PixelArts</a>
+				    <a href="/HTML/Game_page.html">Pixel Games</a>
+				    <a href="mailto:brandonstanlyv@gmail.com">Contactanos!</a><div><br><br><br></div>
+                    <div class="Buscador">
+                        <div class="autocomplete">
+                            <input id="search-input" class="autocomplete-input" type="text" placeholder="Buscar página">
+                            <div id="autocomplete-list" class="autocomplete-items"></div>
+                        </div>
+                        <script>
+                            // Lista de páginas
+                            var pages = [
+                            { title: 'Blasphemous', url: '/Games/Gampa_page/Blasphemous.html' },
+                                { title: 'Celeste', url: '/Games/Gampa_page/Celeste.html' },
+                                { title: 'Chrono Trigger', url: '/Games/Gampa_page/ChronoTrigger.html' },
+                                { title: 'Coffe Talk', url: '/Games/Gampa_page/CoffeTalk.html' },
+                                { title: 'Dead Cells', url: '/Games/Gampa_page/DeadCells.html' },
+                                { title: 'Hollow Knight', url: '/Games/Gampa_page/HollowKnight.html' },
+                                { title: 'Hyper Light Drifter', url: '/Games/Gampa_page/HyperLight.html' },
+                                { title: 'Katana Zero', url: '/Games/Gampa_page/KatanaZero.html' },
+                                { title: 'Left 4 Dead', url: '/Games/Gampa_page/Left4Dead.html' },
+                                { title: 'Loop Hero', url: '/Games/Gampa_page/LoopHero.html' },
+                                { title: 'Moonlighter Adventure', url: '/Games/Gampa_page/Moonlighter.html' },
+                                { title: 'Owlboy', url: '/Games/Gampa_page/Owlboy.html' },
+                                { title: 'Paper Please', url: '/Games/Gampa_page/PaperPlease.html' },
+                                { title: 'RimWorld', url: '/Games/Gampa_page/RimWorld.html' },
+                                { title: 'Spore', url: '/Games/Gampa_page/Spore.html' },
+                                { title: 'Stardew Valley', url: '/Games/Gampa_page/StardewValley.html' },
+                                { title: 'Streets of Rogue', url: '/Games/Gampa_page/StreetsofRogue.html' },
+                                { title: 'Terraria', url: '/Games/Gampa_page/Terraria.html' },
+                                { title: 'The Messenger', url: '/Games/Gampa_page/TheMessenger.html' },
+                                { title: 'There Is No Game', url: '/Games/Gampa_page/ThereIsNoGame.html' },
+                                { title: 'Ultrakill', url: '/Games/Gampa_page/Ultrakill.html' },
+                                { title: 'Undertale', url: '/Games/Gampa_page/Undertale.html' },
+                            ];
+                            // Obtener referencias a los elementos del DOM
+                            var searchInput = document.getElementById('search-input');
+                            var autocompleteList = document.getElementById('autocomplete-list');
+                            // Evento de entrada de teclado en el campo de búsqueda
+                            searchInput.addEventListener('input', function() {
+                                var searchValue = this.value.toLowerCase();
+                                var matches = pages.filter(function(page) {
+                                    return page.title.toLowerCase().indexOf(searchValue) !== -1;
+                                });
+                                autocompleteList.innerHTML = '';
+                                if (matches.length > 0) {
+                                    matches.forEach(function(page) {
+                                        var item = document.createElement('div');
+                                        item.classList.add('autocomplete-item');
+                                        item.innerText = page.title;
+                                        item.addEventListener('click', function() {
+                                            window.location.href = page.url;
+                                        });
+                                        autocompleteList.appendChild(item);
+                                    });
+                                    autocompleteList.style.display = 'block';
+                                } else {
+                                    autocompleteList.style.display = 'none';
+                                }
+                            });
+                            // Evento de clic fuera del campo de búsqueda
+                            window.addEventListener('click', function(e) {
+                                if (!searchInput.contains(e.target)) {
+                                    autocompleteList.style.display = 'none';
+                                }
+                            });
+                        </script>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="capa"></div>
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <label for="btn-menu">X</label>
+            <nav>
+                <img style="width:300px; margin-left: -20px; margin-top: -50px" src="/IMG/LOGO/IMG_0672.png" alt="">
+                <a href="/HTML/Pixelworld.html">Inicio</a>
+                <a href="#">Cuenta</a>
+                <a href="/HTML/Game_page.html">Pixel Games</a>
+                <a href="#">PixelArts</a>
+                <a href="/HTML/Login.html">Cerrar sesion</a>
+                <a href="mailto:brandonstanlyv@gmail.com">Enviar comentarios</a>
+                <a href="https://www.facebook.com/bradonstanlyventura/about" target="_blank"><img width="30px" src="/IMG/LOGO/Facebook_logo.png" alt=""> Facebook</a>
+                <a href="https://twitter.com/TeamFocking" target="_blank"><img width="30px" src="/IMG/LOGO/Twitter_logo.png" alt=""> Twitter</a>
+            </nav>
+        </div>
+    </div>
+    <div class="contenido">
+        <div class="regre">
+            <a href="/HTML/Game_page_3.html"><img src="https://img.icons8.com/ios-filled/50/000000/long-arrow-left.png"/></a>
+        </div>
+        <p style="border-left: #343c7c solid 5px;">Left 4 Dead 2</p>
+        <div class="game">
+            <div id="Display">
+                <div class="carrocel" id="carrocel-1">
+                    <div class="Play" id="Play-1">
+                        <video width="570px" autoplay="autoplay" controls="controls">
+                            <source src="https://cdn.cloudflare.steamstatic.com/steam/apps/5952/movie480.webm?t=1447353587" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="flechas" id="flechas-1">
+                        <a href="#carrocel-7"><i>🢀</i></a>
+                        <a href="#carrocel-2"><i>🢂</i></a>
+                    </div>
+                </div><br>
+                <div class="carrocel" id="carrocel-2">
+                    <div class="Play" id="Play-2">
+                        <img width="570px" src="/IMG/Game_Display/Left4Dead/Left4Dead-img1.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-2">
+                        <a href="#carrocel-1"><i>🢀</i></a>
+                        <a href="#carrocel-3"><i>🢂</i></a>
+                    </div>
+                </div><br>
+                <div class="carrocel" id="carrocel-3">
+                    <div class="Play" id="Play-3">
+                        <img width="570px" src="/IMG/Game_Display/Left4Dead/Left4Dead-img2.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-3">
+                        <a href="#carrocel-2"><i>🢀</i></a>
+                        <a href="#carrocel-4"><i>🢂</i></a>
+                    </div>
+                </div><br>
+                <div class="carrocel" id="carrocel-4">
+                    <div class="Play" id="Play-4">
+                        <img width="570px" src="/IMG/Game_Display/Left4Dead/Left4Dead-img3.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-4">
+                        <a href="#carrocel-3"><i>🢀</i></a>
+                        <a href="#carrocel-5"><i>🢂</i></a>
+                    </div>
+                </div><br>
+                <div class="carrocel" id="carrocel-5">
+                    <div class="Play" id="Play-5">
+                        <img width="570px" src="/IMG/Game_Display/Left4Dead/Left4Dead-img4.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-5">
+                        <a href="#carrocel-4"><i>🢀</i></a>
+                        <a href="#carrocel-6"><i>🢂</i></a>
+                    </div>
+                </div><br>
+                <div class="carrocel" id="carrocel-6">
+                    <div class="Play" id="Play-6">
+                        <img width="570px" src="/IMG/Game_Display/Left4Dead/Left4Dead-img5.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-6">
+                        <a href="#carrocel-5"><i>🢀</i></a>
+                        <a href="#carrocel-7"><i>🢂</i></a>
+                    </div>
+                </div><br>
+                <div class="carrocel" id="carrocel-7">
+                    <div class="Play" id="Play-7">
+                        <img width="570px" src="/IMG/Game_Display/Left4Dead/Left4Dead-img6.jpg" alt="">
+                    </div>
+                    <div class="flechas" id="flechas-7">
+                        <a href="#carrocel-6"><i>🢀</i></a>
+                        <a href="#carrocel-1"><i>🢂</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="cont-info">
+            <b><p style="font-size: 20px; margin-left: 50px;">ACERCA DE ESTE JUEGO</p></b><br>
+            <p style="font-size: 18px; margin-left: 50px;">Ambientado en el apocalipsis zombi, Left 4 Dead 2 
+                (L4D2) es la esperadísima secuela del galardonado Left 4 Dead, el juego cooperativo número 1 
+                de 2008.</p><br>
+            <p style="font-size: 18px; margin-left: 50px;">Este FPS cooperativo de acción terrorífica 
+                lleva a tus amigos y a ti a través de ciudades, pantanos y cementerios del Profundo Sur de EE. UU., 
+                desde Savannah hasta Nueva Orleans, a lo largo de cinco extensas campañas.</p><br>
+            <p style="font-size: 18px; margin-left: 50px;">Jugarás como uno de los cuatro supervivientes, armados con 
+                una amplia y devastadora colección de armas clásicas y modificadas. Además de armas de fuego, también 
+                podrás liberar un poco de agresión en contra de los infectados, usando una variedad de armas de combate 
+                cuerpo a cuerpo para hacer una verdadera carnicería, desde motosierras a hachas, y hasta un sartén mortal.</p><br>
+            <p style="font-size: 18px; margin-left: 50px;">Pondrás a prueba estas armas en contra de (o jugando como 
+                infectado en modo Enfrentamiento) tres nuevos Infectados Especiales. También, te encontrarás con cinco nuevos 
+                infectados comunes no comunes, incluyendo a los aterradores embarrados.</p><br>
+            <p style="font-size: 18px; margin-left: 50px;">La IA Director 2.0 permite llevar el modo de juego frenético y 
+                cargado de acción de L4D al siguiente nivel. Este Director mejorado tiene la habilidad de cambiar el clima 
+                por procedimiento mientras te abres camino peleando por los caminos que tomes, además de ajustar la 
+                población enemiga, efectos y sonidos, para así emparejarse con tu desempeño.</p><br>
+            <p style="font-size: 18px; margin-left: 50px;">L4D2 promete una experiencia excepcionalmente desafiante y satisfactoria 
+                cada vez que juegues, siempre ajustándose a tu estilo de juego.</p><br>
+            <p style="font-size: 20px; margin-left: 50px; color: #343c7c;"><b>Caracteristicas</b></p>
+                <p>
+                    <ul style="font-size: 18px; margin-left: 50px;">
+                        <li>Una nueva generación de juego cooperativo de acción, de los creadores de Half-Life, Portal, Team Fortress y Counter-Strike.</li>
+                        <li>Con más de 20 nuevas armas y objetos, encabezados por más de 10 armas de cuerpo a cuerpo, tales como hachas, motosierras, sartenes y bates de béisbol, los cuales te permiten tener un encuentro cercano y sangriento contra los zombis.</li>
+                        <li>Nuevos supervivientes. Nueva historia. Nuevos diálogos.</li>
+                        <li>Cinco extensas campañas para los modos Cooperativo, Enfrentamiento y Supervivencia.</li>
+                        <li>Un modo multijugador completamente nuevo.</li>
+                        <li>Infectados comunes no comunes. Cada una de las cinco nuevas campañas contiene al menos un nuevo tipo de zombi común no común exclusivo de esa campaña.</li>
+                        <li>Un sistema de estadísticas, clasificaciones y premios que fomenta el juego cooperativo.</li>
+                    </ul>
+                </p><br>
+                <div class="requisitos">
+                    <b><p>Requisitos</p></b>
+                    <p>Minimos</p>
+                    <ul>
+                        <li>Windows® 7 32/64-bit / Vista 32/64 / XP</li><br>
+                        <li>Procesador:  Pentium 4 3.0GHz</li><br>
+                        <li>Memoria: 2 GB de RAM</li><br>
+                        <li>Gráficos: Video card with 128 MB, Shader model 2.0. ATI X800, NVidia 6600 or better</li><br>
+                        <li>DirectX: Versión 9.0c</li><br>
+                        <li>Almacenamiento: 13 GB de espacio disponible</li><br>
+                    </ul>
+                </div>
+                <div class="requisitos-2">
+                    <b><p>Requisitos</p></b>
+                    <p>Recomendados</p>
+                    <ul>
+                        <li>SO: Windows® 7 32/64-bit / Vista 32/64 / XP</li><br>
+                        <li>Procesador: Intel core 2 duo 2.4GHz</li><br>
+                        <li>Memoria: 2 GB de RAM</li><br>
+                        <li>Gráficos: Video Card Shader model 3.0. NVidia 7600, ATI X1600 or better</li><br>
+                        <li>DirectX: Versión 9.0c</li><br>
+                        <li>Almacenamiento: 13 GB de espacio disponible</li><br>
+                    </ul>
+                </div><br>
+        </div>
+    </div>
+    <div class="info-game">
+        <img width="350px" src="/IMG/Game_Display/Left4Dead/Left4Dead-header.jpg" alt="">
+        <p>Ambientado en el apocalipsis zombi, Left 4 Dead 2 (L4D2) es la esperadísima 
+            secuela del galardonado Left 4 Dead, el juego cooperativo número 1 de 2008. 
+            Este FPS cooperativo de acción terrorífica lleva a tus amigos y a ti a través 
+            de ciudades, pantanos y cementerios del Profundo Sur de EE. UU.</p><br>
+            <a href="https://www.mediafire.com/file/ionnxwomzggnz6c/Left_4_Dead_2.rar/file" target="_blank"><input type="button" value="DESCARGAR"></a>
+    </div>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="Copy">&reg;Pixelworld &copy;2022 Stanvs_Dev</div> 
+</body>
+</html>
